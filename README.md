@@ -16,7 +16,9 @@ pip install -r requirements_ogbench.txt
 
 ## Data
 
-Follow [RoboFactory](https://github.com/MARS-EAI/RoboFactory) to generate datasets and process data.
+Follow [RoboFactory](https://github.com/MARS-EAI/RoboFactory) to generate datasets and process data. 
+
+> **Note:** The training code automatically converts processed imitation learning datasets into standard RL datasets.
 
 ## Running
 ```bash
