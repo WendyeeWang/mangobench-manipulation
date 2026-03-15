@@ -6,6 +6,8 @@ MangoBench is the first fully cooperative multi-goal benchmark for offline MARL,
 
 **Note:** The locomotion environment code is available at [mangobench-locomotion](https://github.com/WendyeeWang/mangobench-locomotion).
 
+[![HuggingFace Model](https://img.shields.io/badge/🤗_HuggingFace-Model-blue)](https://huggingface.co/Yi-Wendy-Wang/MANGOBench-Manipulation)
+
 ## Installation
 
 Follow [RoboFactory](https://github.com/MARS-EAI/RoboFactory) to set up the base environment, then install additional dependencies:
@@ -55,6 +57,9 @@ python policy/OGCRL/train.py \
     save_goal=True \
     save_goal_path=policy/OGCRL/ogcrl/goal
 ```
+## Evaluate
+
+If you want to reproduce the results in our paper, you can download our checkpoints in [huggingface](https://huggingface.co/Yi-Wendy-Wang/MANGOBench-Manipulation) and evaluate it.
 
 ## Citation
 
