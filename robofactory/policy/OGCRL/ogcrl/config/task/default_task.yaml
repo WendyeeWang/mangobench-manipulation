@@ -1,0 +1,11 @@
+name: task_config
+
+dataset:
+  _target_: ogcrl.dataset.robot_image_dataset.RobotImageDataset
+  zarr_path: data/useless.zarr
+  horizon: 1
+  pad_before: 0
+  pad_after: 0
+  seed: 42
+  val_ratio: 0.02
+  max_train_episodes: 90

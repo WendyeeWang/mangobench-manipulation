@@ -1,0 +1,32 @@
+# Agent hyperparameters.
+agent_name: "hiql"  # Agent name.
+lr: 3e-4  # Learning rate.
+batch_size: 1024   # Batch size.
+# batch_size=1 
+actor_hidden_dims: [512, 512, 512]   # Actor network hidden dimensions.
+value_hidden_dims: [512, 512, 512]   # Value network hidden dimensions.
+layer_norm: true   # Whether to use layer normalization.
+discount: 0.99   # Discount factor.
+tau: 0.005   # Target network update rate.
+expectile: 0.7   # IQL expectile.
+low_alpha: 3.0   # Low-level AWR temperature.
+high_alpha: 3.0   # High-level AWR temperature.
+subgoal_steps: 10   # Subgoal steps.
+rep_dim: 10   # Goal representation dimension.
+low_actor_rep_grad: false   # Whether low-actor gradients flow to goal representation (use True for pixels).
+const_std: true   # Whether to use constant standard deviation for the actors.
+discrete: false   # Whether the action space is discrete.
+encoder: null   # Visual encoder name (None  'impala_small'  etc.).
+# Dataset hyperparameters.
+dataset_class: 'HGCDataset'   # Dataset class name.
+value_p_curgoal: 0.2   # Probability of using the current state as the value goal.
+value_p_trajgoal: 0.5   # Probability of using a future state in the same trajectory as the value goal.
+value_p_randomgoal: 0.3   # Probability of using a random state as the value goal.
+value_geom_sample: true   # Whether to use geometric sampling for future value goals.
+actor_p_curgoal: 0.0   # Probability of using the current state as the actor goal.
+actor_p_trajgoal: 1.0   # Probability of using a future state in the same trajectory as the actor goal.
+actor_p_randomgoal: 0.0   # Probability of using a random state as the actor goal.
+actor_geom_sample: false   # Whether to use geometric sampling for future actor goals.
+gc_negative: true   # Whether to use '0 if s == g else -1' (True) or '1 if s == g else 0' (False) as reward.
+p_aug: 0.0   # Probability of applying image augmentation.
+frame_stack: null   # Number of frames to stack.
